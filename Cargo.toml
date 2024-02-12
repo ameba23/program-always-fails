@@ -4,6 +4,7 @@ version = "0.1.0"
 authors = ["peg <ameba23@systemli.org>"]
 license = "Unlicense"
 edition = "2021"
+repository = "https://github.com/ameba23/program-always-fails"
 
 # This is required to compile programs to a wasm module
 [lib]
