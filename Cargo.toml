@@ -1,0 +1,28 @@
+[package]
+name = "program-always-fails"
+version = "0.1.0"
+authors = ["peg <ameba23@systemli.org>"]
+license = "Unlicense"
+edition = "2021"
+
+# This is required to compile programs to a wasm module
+[lib]
+crate-type = ["cdylib"]
+
+[dependencies]
+entropy-programs-core={ git="https://github.com/entropyxyz/programs.git", tag="v0.8.0" }
+
+# These are used by `cargo component`
+[package.metadata.component]
+package = "entropy:program-always-fails"
+
+[package.metadata.component.dependencies]
+
+# Metadata related to an Entropy program
+[package.metadata.entropy-program]
+
+# The docker image used to build this program
+docker-image = "peg997/build-entropy-programs:version0.1"
+
+# Configuration interface description
+# interface-description = ""
